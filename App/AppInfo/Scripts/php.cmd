@@ -4,6 +4,8 @@ setlocal
 set "APP_DIR=%~dp0..\.."
 set "COMMON_DIR=%APP_DIR%\..\..\CommonFiles"
 
+call "%~dp0path.cmd" "%APP_DIR%"
+
 if exist "%APP_DIR%\PHP\php.exe" (
     start "PHP Interactive - DevConsole" "%APP_DIR%\PHP\php.exe" -a
     exit

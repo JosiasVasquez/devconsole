@@ -4,6 +4,8 @@ setlocal
 set "APP_DIR=%~dp0..\.."
 set "COMMON_DIR=%APP_DIR%\..\..\CommonFiles"
 
+call "%~dp0path.cmd" "%APP_DIR%"
+
 if exist "%APP_DIR%\NodeJS\node.exe" (
     start "Node Interactive - DevConsole" "%APP_DIR%\NodeJS\node.exe"
     exit

@@ -4,6 +4,8 @@ setlocal
 set "APP_DIR=%~dp0..\.."
 set "COMMON_DIR=%APP_DIR%\..\..\CommonFiles"
 
+call "%~dp0path.cmd" "%APP_DIR%"
+
 if exist "%APP_DIR%\Git\git-cmd.exe" (
     start "Git CMD - DevConsole" "%APP_DIR%\Git\git-cmd.exe"
     exit

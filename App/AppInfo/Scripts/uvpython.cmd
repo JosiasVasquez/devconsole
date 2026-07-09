@@ -4,6 +4,8 @@ setlocal
 set "APP_DIR=%~dp0..\.."
 set "COMMON_DIR=%APP_DIR%\..\..\CommonFiles"
 
+call "%~dp0path.cmd" "%APP_DIR%"
+
 if exist "%APP_DIR%\uv\uv.exe" (
     start "Python Interactive (uv) - DevConsole" "%APP_DIR%\uv\uv.exe" run python
     exit
